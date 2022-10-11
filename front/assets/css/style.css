@@ -4,6 +4,13 @@
 body {
   margin-right: 0;
   margin-left: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 100%;
 }
 
 /*Header*/
@@ -40,45 +47,58 @@ a:hover{
 }
 
 /*Main*/
+main {
+  padding: 2%;
+}
+
+#PremiersBlocs {
+  display: flex;
+  justify-content: space-between;
+}
+
 #guitares {
+  width: 74%;
+  height: 400px;
   background-color: lightgrey;
+  border-radius: 20px;
+  padding: 1%;
 }
 
 #populaire {
+  width: 20%;
+  height: 400px;
   background-color: lightgrey;
+  border-radius: 20px;
+  padding: 1%;
 }
 
+#materielStudio {
+  width: 100%;
+  height: 300px;
+}
 
 /*Footer*/
 footer {
     background-color: lightgrey;
     padding: 2%;
-}
-
-h3 {
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 100%;
-}
-
-.colonnesFooter {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    font-family: 'Raleway', sans-serif;
     padding-right: 20%;
+}
+
+.lignesFooter {
+  font-size: 12px;
+  line-height: 200%;
 }
 
 @media screen and (max-width: 600px) {
 
    footer {
     background-color: lime;
-   }
-
-   .colonnesFooter {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    font-family: 'Raleway', sans-serif;
-    }
+   }
+
 }
