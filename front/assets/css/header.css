@@ -1,12 +1,19 @@
 html{
     --text-black:black;
     --text-blue:blue;
+    --text-grey:rgb(94, 91, 91);
 
+}
+body{
+    margin: 0;
 }
 .sec_logo_menu{
     display: flex;
     justify-content: space-between;
 
+}
+.menu{
+    height: 60px;
 }
 .div_menu{
     margin-right: 20px;
@@ -16,8 +23,15 @@ html{
 }
 ul{
     padding-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: 60px;
+    display: flex;
+    align-items: center;
 }
 li{
+    width: 150px;
+    height: 60px;
     display: inline;
     text-decoration: none;
     margin-right: 5px;
@@ -25,7 +39,35 @@ li{
 a{
     text-decoration: none;
     color: var(--text-black);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 a:hover{
     color: var(--text-blue);
+    border-top: 1px solid var(--text-blue)!important;
+    display: flex;
+    align-items: center;
+}
+p{
+    color: var(--text-grey);
+}
+
+.sec_filtre{
+    padding-left: 40px;
+}
+.search{
+    width: 35px;
+    height: 35px;
+    text-align: 35px;
+    font-size: 15px;
+    background-color: #1515e3;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+.sear_input{
+    height: 30px;
+    border-color: #eeeeee7d;
 }
