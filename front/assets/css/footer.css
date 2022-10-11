@@ -17,6 +17,7 @@ h3 {
     justify-content: space-between;
     align-items: flex-start;
     font-family: 'Raleway', sans-serif;
+    padding-right: 20%;
 }
 
 @media screen and (max-width: 600px) {
