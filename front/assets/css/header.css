@@ -1,0 +1,31 @@
+html{
+    --text-black:black;
+    --text-blue:blue;
+
+}
+.sec_logo_menu{
+    display: flex;
+    justify-content: space-between;
+
+}
+.div_menu{
+    margin-right: 20px;
+}
+.div_logo{
+    padding-left: 40px;
+}
+ul{
+    padding-left: 0px;
+}
+li{
+    display: inline;
+    text-decoration: none;
+    margin-right: 5px;
+}
+a{
+    text-decoration: none;
+    color: var(--text-black);
+}
+a:hover{
+    color: var(--text-blue);
+}
