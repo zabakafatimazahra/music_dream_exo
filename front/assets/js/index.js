@@ -12,27 +12,39 @@ vous trouverez leurs noms et descriptions dans les JSON téléchargés.
 
 //Fetch pour récupérer "les guitares"
 fetch("../back/guitars.json")
-  .then(function (guitares) {
-    if (guitares.ok) {
-      return guitares.json();
+  .then(function (res) {
+    if (res.ok) {
+      return res.json();
     }
   })
-  .then(data => {
-    for(let guit of data) {
-      console.log(guit.name)
+  .then(function(data) {
+    let placeholder = document.querySelector("#listeGuitares");
+    let out = "";
+    for(let guitares of data) {
+      out += `
+              <img src="${guitares.imageUrl}">
+              <h3> ${guitares.name}</h3>
+              <p> ${guitares.price} ou ${guitares.monthly}/mois</p>
+              <p> ${guitares.stars}</p>
+            `;
+
     }
-    console.table(data);
+    placeholder.innerHTML = out;
   })
   .catch(function(error) {
     console.error("Something goes wrong!");
     console.error(error);
   });
 
+
+
+
+
   //Fetch pour récupérer "les plus populaires"
   fetch("../back/populars.json")
-  .then(function (populaire) {
-    if (populaire.ok) {
-      return populaire.json();
+  .then(function (res) {
+    if (res.ok) {
+      return res.json();
     }
   })
   .then(data => {
@@ -45,9 +57,9 @@ fetch("../back/guitars.json")
 
   //Fetch pour récupérer le "matériel studio"
   fetch("../back/studio.json")
-  .then(function (studio) {
-    if (studio.ok) {
-      return studio.json();
+  .then(function (res) {
+    if (res.ok) {
+      return res.json();
     }
   })
   .then(data => {
