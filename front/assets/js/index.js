@@ -21,11 +21,12 @@ fetch("../back/guitars.json")
     let placeholder = document.querySelector("#listeGuitares");
     let out = "";
     for(let guitares of data) {
-      out += `
-              <img src="${guitares.imageUrl}">
+      out += `<div>
+              <img src="../back/images/${guitares.imageUrl}"/>
               <h3> ${guitares.name}</h3>
               <p> ${guitares.price} ou ${guitares.monthly}/mois</p>
               <p> ${guitares.stars}</p>
+              </div>
             `;
     }
     placeholder.innerHTML = out;
