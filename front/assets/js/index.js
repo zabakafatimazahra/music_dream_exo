@@ -27,7 +27,6 @@ fetch("../back/guitars.json")
               <p> ${guitares.price} ou ${guitares.monthly}/mois</p>
               <p> ${guitares.stars}</p>
             `;
-
     }
     placeholder.innerHTML = out;
   })
