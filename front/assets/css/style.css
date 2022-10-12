@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
 
+html{
+  --text-black:black;
+  --text-blue:blue;
+  --text-grey:rgb(94, 91, 91);
+}
+
 body {
-  margin-right: 0;
-  margin-left: 0;
+  margin: 0;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -14,15 +19,12 @@ h3 {
 }
 
 /*Header*/
-html{
-  --text-black:black;
-  --text-blue:blue;
-
-}
 .sec_logo_menu{
   display: flex;
   justify-content: space-between;
-
+}
+.menu{
+  height: 60px;
 }
 .div_menu{
   margin-right: 20px;
@@ -32,19 +34,102 @@ html{
 }
 ul{
   padding-left: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+a{
+  text-decoration: none;
 }
 li{
+  width: 150px;
+  height: 60px;
   display: inline;
   text-decoration: none;
   margin-right: 5px;
 }
-a{
-  text-decoration: none;
+li> a{
+  color: var(--text-black);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+li> a:hover{
+  color: var(--text-blue);
+  border-top: 1px solid var(--text-blue)!important;
+  display: flex;
+  align-items: center;
+}
+p{
+  color: var(--text-grey);
+}
+
+.sec_filtre{
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.search_mob ,.search_desk{
+  height: 35px;
+  text-align: 35px;
+  font-size: 15px;
+  border: none;
+  font-weight: bold;
+}
+.search_mob{
+  width: 35px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.search_desk{
+  background-color: #1515e3;
+  color: white;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 0 10px;
+  border: none;
+}
+
+.sear_input{
+  height: 30px;
+  border-color: #eeeeee7d;
+}
+.sec_filtre>div{
+  border: 2px solid #eeeeee7d;;
+  border-radius: 20px;
+  margin-left: 25px;
+}
+.sec_filtre> div >button{
+  border-radius: 100px;
+  width: 35px;
+  height: 35px;
+  border: none;
+}
+.sec_filtre> div >a{
+  padding-left: 5px;
+  padding-right: 20px;
+  font-weight: bold;
   color: var(--text-black);
 }
-a:hover{
+
+.sec_filtre> div >button>i{
   color: var(--text-blue);
 }
+/*mobile search
+.search_mob ,.search_desk{
+  height: 35px;
+  text-align: 35px;
+  font-size: 15px;
+  background-color: #1515e3;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}*/
 
 /*Main*/
 main {
@@ -107,6 +192,10 @@ footer {
 
 @media screen and (max-width: 600px) {
    footer {
-    background-color: lime;
+    display: inline-block;
+    width: 100%;
+   }
+   footer section {
+    margin-left: 7%;
    }
 }

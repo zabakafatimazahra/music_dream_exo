@@ -15,78 +15,94 @@
 </head>
 
 <body>
-  <header>
-    <section class="sec_logo_menu">
-        <div class="div_logo">
-            <img src="./assets/images/logo/logo_large.png" alt="logo_music">
-            <h2>Trouvez l'instrument de vos rêves</h2>
-            <p>De la musique plein la tête</p>
-        </div>
-        <div class="div_menu">
-            <nav class="menu">
-                <ul>
-                  <li><a href="#">Nos Instruments</a></li>
-                  <li><a href="#">Studio</a></li>
-                </ul>
-              </nav>
-        </div>
-    </section>
-</header>
-
-<main>
-    <section id="PremiersBlocs">
-        <div id="guitares">
-            <h3>Les guitares électriques</h3>
-            <div style="font-weight: bold; font-size: 12px;">Afficher plus</div>
-        </div>
-
-        <div id="populaire">
-            <h3>Les plus populaires<a class="fa-solid fa-star" style="margin-left: 30px;"></a></h3>
-            
-        </div>
-    </section>
-
-  <section id="materielStudio">
-      <h3>Le matériel de studio</h3>
-  </section>
-</main>
-
-<footer> 
-  <section>
-      <div>
-          <h3>À propos</h3>
-          <div class="lignesFooter">
-              <div>Fonctionnement du site</div>
-              <div>Conditions générales de vente</div>
-              <div>données et confidentialité</div>
+    <header>
+        <section class="sec_logo_menu">
+            <div class="div_logo">
+                <img src="./assets/images/logo/logo_large.png" alt="logo_music">
+                <h2>Trouvez l'instrument de vos rêves</h2>
+                <p>De la musique plein la tête</p>
+                <button class="search_mob" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input class="sear_input"type="text" placeholder="..." >
+                <button class="search_desk" type="submit">Rechercher</button>
+            </div>
+            <div class="div_menu">
+                <nav class="menu">
+                    <ul>
+                      <li><a href="#">Nos Instruments</a></li>
+                      <li><a href="#">Studio</a></li>
+                    </ul>
+                  </nav>
+            </div>
+        </section>
+        <section class="sec_filtre" >
+          <h2>Filtres</h2>
+          <div>
+            <button><i class="fa-solid fa-money-bill-1-wave"></i></i></button>
+            <a href="#">Economique</a>
           </div>
-      </div>
-  </section>
-
-  <section>
-      <div>
-          <h3>Notre matériel</h3>
-          <div class="lignesFooter">
-              <div>Charte qualité</div>
+          <div>
+            <button><i class="fa-solid fa-user-ninja"></i></button>
+            <a href="#">Pro</a>
           </div>
-      </div>
-  </section>
-
-  <section>
-      <div>
-          <h3>Assistance</h3>
-          <div class="lignesFooter">
-              <div>Centre d'aide</div>
-              <div>Nous contacter</div>
+          <div>
+            <button><i class="fa-solid fa-money-bill-1-wave"></i></button>
+            <a href="#">Bonnes affaires</a>
           </div>
-      </div>
-  </section>
-</footer> 
-  <!-- TODO la structure de la page d'accueil -->
-  <!-- et son remplissage par API Fetch -->
-  <!-- Pensez à utiliser le web sémantique ! -->
-  <!-- Vos codes HTML et CSS doivent passer la validation ! -->
-  <script src="./assets/js/index.js"></script>
+          <div>
+            <button><i class="fa-solid fa-wand-sparkles"></i></button>
+            <a href="#">Occasions</a>
+          </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="PremiersBlocs">
+            <div id="guitares">
+                <h3>Les guitares électriques</h3>
+                <div style="font-weight: bold; font-size: 12px;">Afficher plus</div>
+            </div>
+
+            <div id="populaire">
+                <h3>Les plus populaires<a class="fa-solid fa-star" style="margin-left: 30px;"></a></h3>
+                
+            </div>
+        </section>
+
+        <section id="materielStudio">
+            <h3>Le matériel de studio</h3>
+        </section>
+    </main>
+
+    <footer> 
+        <section>
+            <h3>À propos</h3>
+            <div class="lignesFooter">
+                <div>Fonctionnement du site</div>
+                <div>Conditions générales de vente</div>
+                <div>données et confidentialité</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Notre matériel</h3>
+            <div class="lignesFooter">
+                <div>Charte qualité</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Assistance</h3>
+            <div class="lignesFooter">
+                <div>Centre d'aide</div>
+                <div>Nous contacter</div>
+            </div>
+        </section>
+    </footer> 
+    <!-- TODO la structure de la page d'accueil -->
+    <!-- et son remplissage par API Fetch -->
+    <!-- Pensez à utiliser le web sémantique ! -->
+    <!-- Vos codes HTML et CSS doivent passer la validation ! -->
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
