@@ -31,6 +31,7 @@ fetch("../back/guitars.json")
     }
     placeholder.innerHTML = out;
   })
+  
   .catch(function(error) {
     console.error("Something goes wrong!");
     console.error(error);
