@@ -29,6 +29,9 @@ ul{
     display: flex;
     align-items: center;
 }
+a{
+    text-decoration: none;
+}
 li{
     width: 150px;
     height: 60px;
@@ -36,15 +39,14 @@ li{
     text-decoration: none;
     margin-right: 5px;
 }
-a{
-    text-decoration: none;
+li> a{
     color: var(--text-black);
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-a:hover{
+li> a:hover{
     color: var(--text-blue);
     border-top: 1px solid var(--text-blue)!important;
     display: flex;
@@ -56,9 +58,58 @@ p{
 
 .sec_filtre{
     padding-left: 40px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
 }
-.search{
+.search_mob ,.search_desk{
+    height: 35px;
+    text-align: 35px;
+    font-size: 15px;
+    border: none;
+    font-weight: bold;
+}
+.search_mob{
     width: 35px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.search_desk{
+    background-color: #1515e3;
+    color: white;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 0 10px;
+    border: none;
+}
+
+.sear_input{
+    height: 30px;
+    border-color: #eeeeee7d;
+}
+.sec_filtre>div{
+    border: 2px solid #eeeeee7d;;
+    border-radius: 20px;
+    margin-left: 25px;
+}
+.sec_filtre> div >button{
+    border-radius: 100px;
+    width: 35px;
+    height: 35px;
+    border: none;
+}
+.sec_filtre> div >a{
+    padding-left: 5px;
+    padding-right: 20px;
+    font-weight: bold;
+    color: var(--text-black);
+}
+
+.sec_filtre> div >button>i{
+    color: var(--text-blue);
+}
+/*mobile search
+.search_mob ,.search_desk{
     height: 35px;
     text-align: 35px;
     font-size: 15px;
@@ -66,8 +117,5 @@ p{
     color: white;
     border-radius: 10px;
     border: none;
-}
-.sear_input{
-    height: 30px;
-    border-color: #eeeeee7d;
-}
+    font-weight: bold;
+}*/
