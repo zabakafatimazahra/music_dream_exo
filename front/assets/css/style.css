@@ -77,6 +77,19 @@ main {
   height: 300px;
 }
 
+@media screen and (max-width: 600px) {
+  #guitares {
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 1%;
+  }
+  #populaire {
+   display: none;
+  }
+}
+
 /*Footer*/
 footer {
     background-color: lightgrey;
@@ -93,12 +106,7 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-
    footer {
     background-color: lime;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
    }
-
 }
