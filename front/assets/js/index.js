@@ -9,20 +9,51 @@ vous trouverez leurs noms et descriptions dans les JSON téléchargés.
 */
 /* Exemple de code d'utilisation de fetch :
 */
+
+//Fetch pour récupérer "les guitares"
 fetch("../back/guitars.json")
-  .then(function (res) {
-    if (res.ok) {
-      return res.json();
+  .then(function (guitares) {
+    if (guitares.ok) {
+      return guitares.json();
     }
   })
   .then(data => {
-    // Utilisation des données dé-jsonifiées dans l'objet data
+    for(let guit of data) {
+      console.log(guit.name)
+    }
     console.table(data);
-    // Regardez la structure du json, comprenez son contenu, intégrez-le
-    // dans votre HTML.
   })
   .catch(function(error) {
-    // Gestion des erreurs
+    console.error("Something goes wrong!");
+    console.error(error);
+  });
+
+  //Fetch pour récupérer "les plus populaires"
+  fetch("../back/populars.json")
+  .then(function (populaire) {
+    if (populaire.ok) {
+      return populaire.json();
+    }
+  })
+  .then(data => {
+    console.table(data);
+  })
+  .catch(function(error) {
+    console.error("Something goes wrong!");
+    console.error(error);
+  });
+
+  //Fetch pour récupérer le "matériel studio"
+  fetch("../back/studio.json")
+  .then(function (studio) {
+    if (studio.ok) {
+      return studio.json();
+    }
+  })
+  .then(data => {
+    console.table(data);
+  })
+  .catch(function(error) {
     console.error("Something goes wrong!");
     console.error(error);
   });
