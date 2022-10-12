@@ -20,14 +20,15 @@ fetch("../back/guitars.json")
   .then(function(listeGuitares) {
     let placeholder = document.querySelector("#listeGuitares");
     let out = "";
-    for(let guitare of listeGuitares) {
-      out += `
-              <img src="../back/images/${guitare.imageUrl}">
-              <h3> ${guitare.name}</h3>
-              <p> ${guitare.price} ou ${guitare.monthly}/mois</p>
-              <p> ${guitare.stars}</p>
-            `;
-    }
+    for(let guitares of listeGuitares) {
+      out += `<div>
+      <img src="../back/images/${guitares.imageUrl}"/>
+      <h3> ${guitares.name}</h3>
+      <p> ${guitares.price} ou ${guitares.monthly}/mois</p>
+      <p> ${guitares.stars}</p>
+      </div>
+      `;
+      }
     placeholder.innerHTML = out;
   })
   
