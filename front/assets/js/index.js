@@ -17,15 +17,15 @@ fetch("../back/guitars.json")
       return res.json();
     }
   })
-  .then(function(data) {
+  .then(function(listeGuitares) {
     let placeholder = document.querySelector("#listeGuitares");
     let out = "";
-    for(let guitares of data) {
+    for(let guitare of listeGuitares) {
       out += `
-              <img src="${guitares.imageUrl}">
-              <h3> ${guitares.name}</h3>
-              <p> ${guitares.price} ou ${guitares.monthly}/mois</p>
-              <p> ${guitares.stars}</p>
+              <img src="../back/images/${guitare.imageUrl}">
+              <h3> ${guitare.name}</h3>
+              <p> ${guitare.price} ou ${guitare.monthly}/mois</p>
+              <p> ${guitare.stars}</p>
             `;
     }
     placeholder.innerHTML = out;
@@ -46,8 +46,18 @@ fetch("../back/guitars.json")
       return res.json();
     }
   })
-  .then(data => {
-    console.table(data);
+  .then(function(listePopulaires) {
+    let placeholder = document.querySelector("#listePopulaires");
+    let out = "";
+    for(let populaire of listePopulaires) {
+      out += `
+              <img src="../back/images/${populaire.imageUrl}">
+              <h3> ${populaire.name}</h3>
+              <p> ${populaire.price} ou ${populaire.monthly}/mois</p>
+              <p> ${populaire.stars}</p>
+            `;
+    }
+    placeholder.innerHTML = out;
   })
   .catch(function(error) {
     console.error("Something goes wrong!");
