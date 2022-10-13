@@ -53,7 +53,7 @@ fetch("../back/populars.json")
             <div>
               <img src="../back/images/${populaire.imageUrl}">
               <h4> ${populaire.name}</h4>
-              <p> ${populaire.price} ou ${populaire.monthly}/mois</p>
+              <p> ${populaire.price} € ou <strong>${populaire.monthly}/mois</strong></p>
               <p> ${populaire.stars}</p>
             </div>
           `;
