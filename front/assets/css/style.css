@@ -323,7 +323,7 @@ footer {
     display: none;
    }
    #blocStudio {
-    display: none;
+    display: block;
   }
   .sec_logo_menu{
     display: block;
