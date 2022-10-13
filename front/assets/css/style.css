@@ -69,7 +69,7 @@ li> a:hover{
   display: flex;
   align-items: center;
 }
-p{
+.div_logo> p{
   color: var(--text-grey);
 }
 
@@ -162,6 +162,10 @@ main {
   border-radius: 20px;
   padding: 1%;
 }
+#blocPopulaires> h3{
+  margin-bottom: 35px;
+  font-size: 14px;
+}
 
 #blocStudio {
   width: 100%;
@@ -185,18 +189,38 @@ main {
 
 #listePopulaires > div {
   display: block;
-  height: 30%;
+  height: 110px;
+  border: 2px solid white;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 5px 7px 9px rgb(136 136 136);
+  margin-bottom: 20px;
 }
-
+#listePopulaires>div> h4{
+  letter-spacing: 1px;
+  font-size: 13px;
+  margin-left: 35px;
+  margin-top: 12px;
+  margin-bottom: 3px;
+}
+#listePopulaires > div > p {
+  margin-left: 35px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
 #listePopulaires > div > img {
-  height: 100px;
+  height: 90px;
+  float: left;
+  margin-top: 9px;
 }
 
 
 
 #listePopulaires {
   object-fit: cover;
-  background-color: lime;
+  
 }
 
 #listeStudio {
