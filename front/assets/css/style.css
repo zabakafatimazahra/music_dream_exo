@@ -272,31 +272,6 @@ main {
   margin-bottom: 12px;
 }
 
-@media screen and (max-width: 600px) {
-  #blocGuitares {
-    width: 100%;
-    height: 400px;
-    background-color: white;
-    border-radius: 20px;
-    padding: 1%;
-  }
-  #listeGuitares {
-    display: inline-block;
-    width: 100%;
-  }
-  #listeGuitares > div {
-    width: 100%;
-    border-radius: 20px;
-    background-color: white;
-    margin-bottom: 3%;
-    box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 12px;
-  }
-
-  #blocPopulaires {
-   display: none;
-  }
-}
-
 /*Footer*/
 footer {
     background-color: lightgrey;
@@ -320,16 +295,27 @@ footer {
    footer section {
     margin-left: 7%;
    }
-   #guitares {
+   #blocGuitares {
     width: 100%;
     height: 400px;
     background-color: white;
     border-radius: 20px;
     padding: 1%;
   }
-  #populaire {
-   display: none;
+  #listeGuitares {
+    display: inline-block;
+    width: 100%;
   }
+  #listeGuitares > div {
+    width: 100%;
+    border-radius: 20px;
+    background-color: white;
+    margin-bottom: 3%;
+    box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 12px;
+  }
+  #blocPopulaires {
+    display: none;
+   }
   .sec_logo_menu{
     display: block;
   }
