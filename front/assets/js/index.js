@@ -25,7 +25,7 @@ fetch("../back/guitars.json")
               <div>
                 <img src="../back/images/${guitares.imageUrl}"/>
                 <h4> ${guitares.name}</h4>
-                <p> ${guitares.price}€ ou ${guitares.monthly}€/mois</p>
+                <p> ${guitares.price} € ou <strong>${guitares.monthly} € / mois</strong></p>
                 <p> ${guitares.stars}</p>
               </div>
             `;
@@ -53,7 +53,7 @@ fetch("../back/populars.json")
             <div>
               <img src="../back/images/${populaire.imageUrl}">
               <h4> ${populaire.name}</h4>
-              <p> ${populaire.price} € ou <strong>${populaire.monthly}/mois</strong></p>
+              <p> ${populaire.price} € ou <strong>${populaire.monthly} € / mois</strong></p>
               <p> ${populaire.stars}</p>
             </div>
           `;
