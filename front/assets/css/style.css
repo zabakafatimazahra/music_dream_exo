@@ -16,6 +16,7 @@ h3 {
   font-weight: bold;
   font-size: 16px;
   line-height: 100%;
+  margin-bottom: 35px;
 }
 
 h4 {
@@ -64,11 +65,14 @@ li> a{
 }
 li> a:hover{
   color: var(--text-blue);
-  border-top: 1px solid var(--text-blue)!important;
+  border-top: 1px solid var(--text-blue);
   display: flex;
   align-items: center;
 }
-.div_logo> p{
+.sec_info{
+  padding-left: 40px;
+}
+.sec_info> p{
   color: var(--text-grey);
 }
 
@@ -107,6 +111,8 @@ li> a:hover{
   border: 2px solid #eeeeee7d;;
   border-radius: 20px;
   margin-left: 25px;
+  display: flex;
+  align-items: center;
 }
 .sec_filtre> div >button{
   border-radius: 100px;
@@ -124,17 +130,7 @@ li> a:hover{
 .sec_filtre> div >button>i{
   color: var(--text-blue);
 }
-/*mobile search
-.search_mob ,.search_desk{
-  height: 35px;
-  text-align: 35px;
-  font-size: 15px;
-  background-color: #1515e3;
-  color: white;
-  border-radius: 10px;
-  border: none;
-  font-weight: bold;
-}*/
+
 
 /*Main*/
 main {
@@ -153,6 +149,13 @@ main {
   border-radius: 20px;
   padding: 1%;
 }
+#blocGuitares> h3 {
+  margin-left: 5px;
+}
+#blocGuitares> h4 {
+  margin-left: 15px;
+}
+
 
 #blocPopulaires {
   width: 20%;
@@ -163,7 +166,12 @@ main {
 }
 #blocPopulaires> h3{
   margin-bottom: 35px;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 100%;
+}
+#blocPopulaires> h3>i{
+  margin-left: 20px;
 }
 
 #blocStudio {
@@ -176,13 +184,12 @@ main {
   border-radius: 20px;
   background-color: white;
   margin-bottom: 3%;
-  box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 2.6px;
+  box-shadow: rgb(0 0 0 / 15%) 6px 4px 2.6px;
 }
 #listeGuitares > div > img {
-  width: 250px;
+  width: 200px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 10px;
   margin-top: 3%;
 }
 #listeGuitares > div > p {
@@ -211,7 +218,7 @@ main {
   border: 2px solid white;
   background: white;
   border-radius: 20px;
-  box-shadow: 5px 7px 9px rgb(136 136 136);
+  box-shadow: rgb(0 0 0 / 15%) 6px 4px 2.6px;
   margin-bottom: 20px;
 }
 #listePopulaires>div> h4{
@@ -305,7 +312,7 @@ footer {
   line-height: 200%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
    footer {
     display: inline-block;
     width: 100%;
@@ -313,4 +320,58 @@ footer {
    footer section {
     margin-left: 7%;
    }
+   #guitares {
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 1%;
+  }
+  #populaire {
+   display: none;
+  }
+  .sec_logo_menu{
+    display: block;
+  }
+  .div_logo{
+    text-align: center;
+  }
+  .div_menu{
+    margin-right: 0px;
+  }
+  .menu{
+    display: flex;
+    justify-content: center;
+  }
+  .menu> ul> li> a:hover{
+    color: var(--text-blue);
+    border-bottom: 1px solid var(--text-blue);
+    display: flex;
+    border-top: none;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+.search_desk{
+  display: none;
+}
+
+.search_mob ,.search_desk{
+  height: 37px;
+  text-align: 35px;
+  font-size: 15px;
+  background-color: #1515e3;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}
+}
+@media screen and (min-width: 1024px) {
+  .search_desk{
+    display: inline;
+  }
+
 }
