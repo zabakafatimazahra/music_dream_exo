@@ -178,7 +178,6 @@ main {
   margin-bottom: 3%;
   box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 2.6px;
 }
-
 #listeGuitares > div > img {
   width: 250px;
   display: block;
@@ -186,14 +185,12 @@ main {
   margin-right: auto;
   margin-top: 3%;
 }
-
 #listeGuitares > div > p {
   font-size: 13px;
   letter-spacing: 1px;
   line-height: 100%;
   margin-left: 15px;
 }
-
 #listeGuitares > div > h4 {
   letter-spacing: 1px;
   font-size: 13px;
@@ -201,7 +198,6 @@ main {
   margin-top: 12px;
   margin-bottom: 3px;
 }
-
 #listeGuitares {
   display: flex;
   flex-wrap: wrap;
@@ -237,20 +233,36 @@ main {
   float: left;
   margin-top: 9px;
 }
-
-
-
 #listePopulaires {
   object-fit: cover;
-  
 }
 
 #listeStudio {
   display: flex;
-  flex-wrap: wrap;
-  align-self: flex-start;
+  justify-content: space-around;
+  gap: 2%;
   object-fit: cover;
   background-color: lime;
+}
+#listeStudio > div {
+  width: 30%;
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 3%;
+  box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 2.6px;
+}
+#listeStudio > div > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+}
+#listeStudio > div > h4{
+  letter-spacing: 1px;
+  font-size: 13px;
+  margin-left: 20px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 @media screen and (max-width: 600px) {
