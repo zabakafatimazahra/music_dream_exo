@@ -25,7 +25,7 @@ fetch("../back/guitars.json")
               <div>
                 <img src="../back/images/${guitares.imageUrl}"/>
                 <h4> ${guitares.name}</h4>
-                <p> ${guitares.price} ou ${guitares.monthly}/mois</p>
+                <p> ${guitares.price}€ ou ${guitares.monthly}€/mois</p>
                 <p> ${guitares.stars}</p>
               </div>
             `;

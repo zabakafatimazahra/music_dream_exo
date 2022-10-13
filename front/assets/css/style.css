@@ -21,7 +21,6 @@ h3 {
 h4 {
   font-weight: bold;
   font-size: 10px;
-  line-height: 100%;
 }
 
 /*Header*/
@@ -170,17 +169,40 @@ main {
 
 #listeGuitares > div {
   width: 30%;
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 3%;
+  box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 2.6px;
 }
 
 #listeGuitares > div > img {
-  width: 100px;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+}
+
+#listeGuitares > div > p {
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 100%;
+  margin-left: 15px;
+}
+
+#listeGuitares > div > h4 {
+  letter-spacing: 1px;
+  font-size: 13px;
+  margin-left: 15px;
+  margin-top: 12px;
+  margin-bottom: 3px;
 }
 
 #listeGuitares {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   object-fit: cover;
-  background-color: lime;
 }
 
 #listePopulaires > div {
