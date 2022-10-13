@@ -29,6 +29,9 @@ fetch("../back/guitars.json")
                 <p> ${guitares.stars}</p>
               </div>
             `;
+               //  `for(let str of guitares.stars){
+           //   console.log(str);
+       // };
       }
     placeholder.innerHTML = out;
   })
