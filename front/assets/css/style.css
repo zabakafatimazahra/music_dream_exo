@@ -214,6 +214,11 @@ main {
   justify-content: space-between;
   object-fit: cover;
 }
+/*TODO*//*TODO*//*TODO*//*TODO*//*TODO*//*TODO*/
+#listeGuitares > div > a {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
 
 #listePopulaires > div {
   display: block;
@@ -237,6 +242,11 @@ main {
   margin-bottom: 5px;
   font-size: 13px;
   letter-spacing: 1px;
+}
+/*TODO*//*TODO*//*TODO*//*TODO*//*TODO*//*TODO*/
+#listePopulaires > div > a {
+  margin-left: 10px;
+  margin-bottom: 5px;
 }
 #listePopulaires > div > img {
   height: 90px;
