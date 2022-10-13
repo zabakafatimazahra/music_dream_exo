@@ -18,6 +18,12 @@ h3 {
   line-height: 100%;
 }
 
+h4 {
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 100%;
+}
+
 /*Header*/
 .sec_logo_menu{
   display: flex;
@@ -186,7 +192,17 @@ main {
   height: 100px;
 }
 
+
+
 #listePopulaires {
+  object-fit: cover;
+  background-color: lime;
+}
+
+#listeStudio {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
   object-fit: cover;
   background-color: lime;
 }
