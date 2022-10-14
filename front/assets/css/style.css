@@ -267,16 +267,99 @@ main {
   flex-wrap: wrap;
 }
 #listeStudio :first-child{
-height: 100%;
-color: red;
-}
-#listesStudio :nth-child(2n) {
-  height: 50%;
-  color: blue;
+  width: 23%;
+  height: 100%;
+  align-items: center;
 }
 #listeStudio :first-child>img{
-  height: 245px;
-  }
+  height: 90%;
+  width: 96%;
+}
+#listeStudio :first-child>h4{
+   margin: auto;
+   margin-left: 20px;
+}
+
+#listeStudio> div:nth-child(2){
+  height: 54%;
+  width: 23%;
+  display: grid;
+}
+#listeStudio> div:nth-child(2)>img{
+  height: 100px;
+  width: 136px;
+  margin: auto;
+}
+#listeStudio> div:nth-child(2)>h4{
+  margin: auto;
+  margin-left: 20px;
+}
+
+#listeStudio> div:nth-child(3){
+  height: 44%;
+  width: 23%;
+  display: grid;
+ 
+}
+#listeStudio> div:nth-child(3)>img{
+  height: 100px;
+  width: 136px;
+  margin: auto;
+}
+#listeStudio> div:nth-child(3)>h4{
+  margin: auto;
+  margin-bottom: 18px;
+  margin-left: 20px;
+}
+
+#listeStudio> div:nth-child(4){
+  width: 23%;
+  height: 100%;
+  align-items: center;
+}
+#listeStudio> div:nth-child(4)>img{
+  height: 90%;
+  width: 96%;
+}
+#listeStudio> div:nth-child(4)>h4{
+  margin: auto;
+  margin-left: 20px;
+}
+
+
+#listeStudio> div:nth-child(5){
+  height: 54%;
+  width: 23%;
+  display: grid;
+}
+#listeStudio> div:nth-child(5)>img{
+  height: 100px;
+  width: 136px;
+  margin: auto;
+}
+#listeStudio> div:nth-child(5)>h4{
+  margin: auto;
+  margin-left: 20px;
+}
+
+#listeStudio> div:nth-child(6){
+  height: 44%;
+  width: 23%;
+  display: grid;
+ 
+}
+#listeStudio> div:nth-child(6)>img{
+  height: 100px;
+  width: 136px;
+  margin: auto;
+}
+#listeStudio> div:nth-child(6)>h4{
+  margin: auto;
+  margin-left: 20px;
+  margin-bottom: 18px;
+}
+
+
 #listeStudio > div {
   border-radius: 20px;
   background-color: white;
@@ -286,7 +369,6 @@ color: red;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3%;
 }
 #listeStudio > div > h4{
   letter-spacing: 1px;
@@ -366,7 +448,21 @@ footer {
     border-top: none;
     align-items: center;
   }
+  #listeStudio{
+    display: inline;
+  }
+  #listeStudio > div{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  #listeStudio > div> img{
+    margin: 0;
+    width: 150px;
 }
+  
+}
+
 
 @media screen and (max-width: 1024px) {
 
