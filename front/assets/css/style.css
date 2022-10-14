@@ -425,7 +425,7 @@ footer {
   #blocPopulaires {
     display: none;
    }
-   #blocStudio {
+  #blocStudio {
     display: block;
   }
   .sec_logo_menu{
@@ -452,13 +452,17 @@ footer {
     display: inline;
   }
   #listeStudio > div{
-    width: 100%;
+    width: 100% !important;
     text-align: left;
     margin-bottom: 10px;
+    height: 200px !important;
   }
   #listeStudio > div> img{
     margin: 0;
-    width: 150px;
+    width: 30% !important;
+    max-height: 160px;
+    min-height: 150px;
+    margin-left: 15px !important;
 }
   
 }
