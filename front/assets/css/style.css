@@ -87,7 +87,7 @@ li> a:hover{
 }
 .search_mob ,.search_desk{
   height: 35px;
-  text-align: 35px;
+  /*text-align: 35px;*/
   font-size: 15px;
   border: none;
   font-weight: bold;
@@ -477,7 +477,7 @@ footer {
 
 .search_mob {
   height: 37px;
-  text-align: 35px;
+  /*text-align: 35px;*/
   font-size: 15px;
   background-color: #1515e3;
   color: white;
