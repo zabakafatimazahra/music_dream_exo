@@ -159,10 +159,8 @@ main {
   margin-left: 15px;
 }
 
-
 #blocPopulaires {
   width: 20%;
-  height: 500px;
   background-color: lightgrey;
   border-radius: 20px;
   padding: 1%;
@@ -213,7 +211,7 @@ main {
   justify-content: space-between;
   object-fit: cover;
 }
-/*TODO*//*TODO*//*TODO*//*TODO*//*TODO*//*TODO*/
+
 #listeGuitares > div > i {
   margin-left: 10px;
   margin-bottom: 5px;
@@ -242,7 +240,7 @@ main {
   font-size: 13px;
   letter-spacing: 1px;
 }
-/*TODO*//*TODO*//*TODO*//*TODO*//*TODO*//*TODO*/
+
 #listePopulaires > div > i {
   margin-top: 15px;
   margin-left: 10px;
@@ -393,15 +391,29 @@ footer {
   line-height: 200%;
 }
 
-/*Responsive*/
+/*Responsive Téléphone portable*/
 @media screen and (max-width: 720px) {
-   footer {
-    display: inline-block;
-    width: 100%;
-   }
-   footer section {
-    margin-left: 7%;
-   }
+  .sec_logo_menu{
+    display: block;
+  }
+  .div_logo{
+    text-align: center;
+  }
+  .div_menu{
+    margin-right: 0px;
+  }
+  .menu{
+    display: flex;
+    justify-content: center;
+  }
+  .menu> ul> li> a:hover{
+    color: var(--text-blue);
+    border-bottom: 1px solid var(--text-blue);
+    display: flex;
+    border-top: none;
+    align-items: center;
+  }
+  
    #PremiersBlocs {
     display:block;
   }
@@ -425,30 +437,11 @@ footer {
   }
   #blocPopulaires {
     display: none;
-   }
+  }
   #blocStudio {
     display: block;
   }
-  .sec_logo_menu{
-    display: block;
-  }
-  .div_logo{
-    text-align: center;
-  }
-  .div_menu{
-    margin-right: 0px;
-  }
-  .menu{
-    display: flex;
-    justify-content: center;
-  }
-  .menu> ul> li> a:hover{
-    color: var(--text-blue);
-    border-bottom: 1px solid var(--text-blue);
-    display: flex;
-    border-top: none;
-    align-items: center;
-  }
+  
   #listeStudio{
     display: inline;
   }
@@ -464,51 +457,57 @@ footer {
     max-height: 160px;
     min-height: 150px;
     margin-left: 15px !important;
-}
+  }
+  footer {
+    display: inline-block;
+    width: 100%;
+  }
+  footer section {
+    margin-left: 7%;
+  }
   
 }
 
-/*Tablette*/
+/*Responsive Tablette*/
 @media screen and (max-width: 1024px) {
 
-.search_desk{
-  display: none;
+  .search_desk{
+    display: none;
+  }
+
+  .search_mob {
+    height: 37px;
+    /*text-align: 35px;*/
+    font-size: 15px;
+    background-color: #1515e3;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: grab;
+  }
+
+  #listeGuitares > div > i {
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+
+  #listePopulaires > div > i {
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    margin-top: 8px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
 }
 
-.search_mob {
-  height: 37px;
-  /*text-align: 35px;*/
-  font-size: 15px;
-  background-color: #1515e3;
-  color: white;
-  border-radius: 10px;
-  border: none;
-  font-weight: bold;
-  cursor: grab;
-}
-
-#listeGuitares > div > i {
-  width: 10px;
-  height: 10px;
-  font-size: 10px;
-  margin-top: 5px;
-  margin-left: 10px;
-  margin-bottom: 5px;
-}
-
-#listePopulaires > div > i {
-  width: 10px;
-  height: 10px;
-  font-size: 10px;
-  margin-top: 8px;
-  margin-left: 5px;
-  margin-bottom: 5px;
-}
-}
 @media screen and (min-width: 1024px) {
   .search_desk{
     display: inline;
-  
   }
-
 }

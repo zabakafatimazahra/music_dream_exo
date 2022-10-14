@@ -10,6 +10,7 @@ vous trouverez leurs noms et descriptions dans les JSON téléchargés.
 /* Exemple de code d'utilisation de fetch :
 */
 
+/*
 let fetchGuitares = "../back/guitars.json";
 let fetchPopulaires = "../back/populars.json";
 let fetchStudio = "../back/studio.json";
@@ -22,15 +23,7 @@ function FactoFetch(chemin) {
     }
   })
 }
-
-/*Première partie des éléments des articles ("Guitares" ou "Populaires")*/
-function Facto(element) {
-  return `
-          <div><img src="../back/images/${element.imageUrl}"/>
-          <h4> ${element.name}</h4>
-          <p> ${element.price} € ou <strong>${element.monthly} € / mois</strong></p>
-          `;
-}
+*/
 
 /*Deuxième partie des éléments des articles ("Guitares" ou "Populaires")*/
 /*
@@ -67,8 +60,8 @@ function FactoEtoiles(element) {
 }
 */
 
-
 /*Créer les étoiles*/
+/*
 function CreationHtmlUneEtoile() {
   return `<i class="fa-solid fa-star" style="color:blue;"><i>`
 }
@@ -90,6 +83,16 @@ function MaximumHtmlStars(max, quantite) {
     return max;
   }
 }
+*/
+
+/*Première partie des éléments des articles ("Guitares" ou "Populaires")*/
+function InfosArticle(element) {
+  return `
+          <div><img src="../back/images/${element.imageUrl}"/>
+          <h4> ${element.name}</h4>
+          <p> ${element.price} € ou <strong>${element.monthly} € / mois</strong></p>
+          `;
+}
 
 //Fetch pour récupérer "les guitares"
 fetch("../back/guitars.json")
@@ -102,45 +105,41 @@ fetch("../back/guitars.json")
     let placeholder = document.querySelector("#listeGuitares");
     let out = "";
     for (let guitares of listeGuitares) {
-      out += Facto(guitares);
+      out += InfosArticle(guitares);
       
       if (guitares.stars == 3) {
         out += `
-                <p>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-                </p>
+                  <p>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                  </p>
                 </div>
               `;
       }
       if (guitares.stars == 4) {
         out += `
-         
-                <p>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-                </p>
+                  <p>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                  </p>
                 </div>
               `;
       }
       if (guitares.stars == 5) {
         out += `
-    
-              <p>
-              <i class="fa-solid fa-star" style="color:blue;"></i>
-              <i class="fa-solid fa-star" style="color:blue;"></i>
-              <i class="fa-solid fa-star" style="color:blue;"></i>
-              <i class="fa-solid fa-star" style="color:blue;"></i>
-              <i class="fa-solid fa-star" style="color:blue;"></i>
-              </p>
+                  <p>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                  </p>
                 </div>
               `;
       }
-    
-
     }
     placeholder.innerHTML = out;
   })
@@ -161,7 +160,7 @@ fetch("../back/populars.json")
     let placeholder = document.querySelector("#listePopulaires");
     let out = "";
     for (let populaire of listePopulaires) {
-      out += Facto(populaire);
+      out += InfosArticle(populaire);
      
       if (populaire.stars == 3) {
         out += `
@@ -175,25 +174,25 @@ fetch("../back/populars.json")
       }
       if (populaire.stars == 4) {
         out += `
-              <p>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-              </p>
-                      </div>
+                  <p>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                  </p>
+                </div>
               `;
       }
       if (populaire.stars == 5) {
         out += `
-              <p>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-                <i class="fa-solid fa-star" style="color:blue;"></i>
-              </p>
-                      </div>
+                  <p>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                  </p>
+                </div>
               `;
       }
     
