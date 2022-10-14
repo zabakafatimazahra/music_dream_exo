@@ -10,6 +10,15 @@ vous trouverez leurs noms et descriptions dans les JSON téléchargés.
 /* Exemple de code d'utilisation de fetch :
 */
 
+
+function Facto(element) {
+  return `
+          <div><img src="../back/images/${element.imageUrl}"/>
+          <h4> ${element.name}</h4>
+          <p> ${element.price} € ou <strong>${element.monthly} € / mois</strong></p>
+          `
+}
+
 /*Créer les étoiles*/
 function CreationHtmlUneEtoile() {
   return `<i class="fa-solid fa-star" style="color:blue;"><i>`
@@ -17,7 +26,7 @@ function CreationHtmlUneEtoile() {
 
 function CreationHtmlStars(Stars) {
   let out = "";
-  for (let i = 0; i < Stars; i++) {
+  for (let i = 1; i < Stars; i++) {
     out += CreationHtmlUneEtoile();
   }
   return out;
@@ -34,50 +43,38 @@ fetch("../back/guitars.json")
     let placeholder = document.querySelector("#listeGuitares");
     let out = "";
     for (let guitares of listeGuitares) {
-      out += `
-            <div>
-              <img src="../back/images/${guitares.imageUrl}"/>
-              <h4> ${guitares.name}</h4>
-              <p> ${guitares.price} € ou <strong>${guitares.monthly} € / mois</strong></p>
-            `;
-      CreationHtmlStars(guitares.stars);
-
+      out += Facto(guitares);
+      out += CreationHtmlStars(guitares.stars);
       out += `</div>`;
 
       /*
-      out += `
-          <div>
-            <img src="../back/images/${guitares.imageUrl}"/>
-            <h4> ${guitares.name}</h4>
-            <p> ${guitares.price} € ou <strong>${guitares.monthly} € / mois</strong></p>
-            `;
-      
+      out += Facto(guitares);
       if (guitares.stars == 3) {
         out += `
-                  <a id="un" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="deux" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="trois" class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
                 </div>
               `;
       }
       if (guitares.stars == 4) {
         out += `
          
-                  <a id="un" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="deux" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="trois" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="quatre" class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
                 </div>
               `;
       }
       if (guitares.stars == 5) {
         out += `
     
-                  <a id="un" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="deux" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="trois" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="quatre" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="cinq" class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
                 </div>
               `;
       }
@@ -103,38 +100,31 @@ fetch("../back/populars.json")
     let placeholder = document.querySelector("#listePopulaires");
     let out = "";
     for (let populaire of listePopulaires) {
-
-      out += `
-                  <div>
-                  <img src="../back/images/${populaire.imageUrl}">
-                  <h4> ${populaire.name}</h4>
-                  <p> ${populaire.price} € ou <strong>${populaire.monthly} € / mois</strong></p>
-            `;
-
+      out += Facto(populaire);
       if (populaire.stars == 3) {
         out += `
-                  <a id="un" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="deux" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="trois" class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
                 </div>
               `;
       }
       if (populaire.stars == 4) {
         out += `
-                  <a id="un" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="deux" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="trois" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="quatre" class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
                 </div>
               `;
       }
       if (populaire.stars == 5) {
         out += `
-                  <a id="un" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="deux" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="trois" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="quatre" class="fa-solid fa-star" style="color:blue;"></a>
-                  <a id="cinq" class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <a class="fa-solid fa-star" style="color:blue;"></a>
                 </div>
               `;
       }
