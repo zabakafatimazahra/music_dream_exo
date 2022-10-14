@@ -130,11 +130,13 @@ li> a:hover{
   font-weight: bold;
   color: var(--text-black);
 }
-
 .sec_filtre> div >button>i{
   color: var(--text-blue);
 }
-
+header> div>p{
+  color: var(--text-grey);
+  margin-left: 28px;
+  }
 
 /*Main*/
 main {
