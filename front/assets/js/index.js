@@ -33,6 +33,7 @@ function Facto(element) {
 }
 
 /*Deuxième partie des éléments des articles ("Guitares" ou "Populaires")*/
+/*
 function FactoEtoiles(element) {
   if (element.stars == 3) {
     return out += `
@@ -64,6 +65,8 @@ function FactoEtoiles(element) {
           `;
   }
 }
+*/
+
 
 /*Créer les étoiles*/
 function CreationHtmlUneEtoile() {
@@ -100,41 +103,43 @@ fetch("../back/guitars.json")
     let out = "";
     for (let guitares of listeGuitares) {
       out += Facto(guitares);
-      out += CreationHtmlStars(guitares.stars);
-      out += `</div>`;
-
-      /*
-      out += Facto(guitares);
+      
       if (guitares.stars == 3) {
         out += `
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                <p>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+                </p>
                 </div>
               `;
       }
       if (guitares.stars == 4) {
         out += `
          
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                <p>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+                </p>
                 </div>
               `;
       }
       if (guitares.stars == 5) {
         out += `
     
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
+              <p>
+              <i class="fa-solid fa-star" style="color:blue;"></i>
+              <i class="fa-solid fa-star" style="color:blue;"></i>
+              <i class="fa-solid fa-star" style="color:blue;"></i>
+              <i class="fa-solid fa-star" style="color:blue;"></i>
+              <i class="fa-solid fa-star" style="color:blue;"></i>
+              </p>
                 </div>
               `;
       }
-      */
+    
 
     }
     placeholder.innerHTML = out;
@@ -160,29 +165,35 @@ fetch("../back/populars.json")
      
       if (populaire.stars == 3) {
         out += `
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
+                  <p>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                    <i class="fa-solid fa-star" style="color:blue;"></i>
+                  </p>
                 </div>
               `;
       }
       if (populaire.stars == 4) {
         out += `
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                </div>
+              <p>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+              </p>
+                      </div>
               `;
       }
       if (populaire.stars == 5) {
         out += `
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                  <a class="fa-solid fa-star" style="color:blue;"></a>
-                </div>
+              <p>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+                <i class="fa-solid fa-star" style="color:blue;"></i>
+              </p>
+                      </div>
               `;
       }
     
